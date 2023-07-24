@@ -1,0 +1,19 @@
+.box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.dice {
+  width: 150px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 3px solid black;
+  background-color: red;
+  color: white;
+}
