@@ -8,11 +8,11 @@ console.log("Giocatore 2: " + playerPC);
 
 // Generate number random Player 1
 const numberUtent = Math.floor(Math.random() * 6) + 1;
-console.log(playerUtent + "ha fatto: " + numberUtent);
+console.log(playerUtent + " ha fatto: " + numberUtent);
 
 // Generate number random Player 2
 const numberPC = Math.floor(Math.random() * 6) + 1;
-console.log(playerPC + "ha fatto: " + numberPC);
+console.log(playerPC + " ha fatto: " + numberPC);
 
 // Select winner
 if (numberUtent > numberPC) {
