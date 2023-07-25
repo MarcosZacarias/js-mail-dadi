@@ -1,20 +1,39 @@
-const emailUtent = prompt("Inserisci la tua email");
-console.log("Email utente: " + emailUtent);
+// Input email Utent
+const emailUtentInput = document.getElementById("email-utent");
+console.log("Email utente: " + emailUtentInput.value);
 
+// Button send
+const btnSend = document.getElementById("btn-send");
+
+// List Correct emails
 const correctEmails = ["admin@gmail.com", "user@gmail.com", "guest@gmail.com"];
 console.table(correctEmails);
 
-let successEmail;
+// correct email
+let correctEmail = "";
 
-for (let i = 0; i < correctEmails.length; i++) {
-  correctEmail = correctEmails[i];
-  // console.log(correctEmail);
+// Success Email
+let isSuccessEmail = false;
+// Mail Utent
+let emailUtent = "";
+emailUtent = emailUtentInput.value;
+console.log("Mail del utente " + emailUtent);
+console.log(typeof emailUtent);
 
-  if (emailUtent == correctEmail) {
-    successEmail = correctEmail + " Email inserita corretta";
-  } else {
-    successEmail = "Email inserita incorretta";
+// Button send Click
+btnSend.addEventListener("click", function () {
+  for (let i = 0; i < correctEmails.length; i++) {
+    correctEmail = correctEmails[i];
+    console.log(correctEmail);
+
+    if (emailUtent == correctEmail) {
+      isSuccessEmail = true;
+    }
   }
-}
 
-console.log(successEmail);
+  if (isSuccessEmail) {
+    console.log("Email inserita corretta");
+  } else {
+    console.log("Email inserita nmon è corretta");
+  }
+});
